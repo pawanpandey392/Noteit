@@ -1,3 +1,10 @@
 .card {
   margin: '.5rem';
 }
+
+
+.dotSeparator {
+  font-size: 13px;
+  font-weight: 800;
+  color: chocolate;
+}

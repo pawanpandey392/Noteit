@@ -1,10 +1,9 @@
-.siteheader {
+.siteHeader {
   background-color: rgba(0, 0, 0, .85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
 
-a {
-  color: #999;
-  transition: ease-in-out color .15s;
+.siteHeader a {
+  color: rgb(137, 197, 199);
 }

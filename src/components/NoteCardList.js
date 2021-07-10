@@ -7,8 +7,7 @@ function NoteCardList (props) {
         <NoteCard 
           key={note.id} 
           id={note.id} 
-          image={note.image} 
-          key={note.id} 
+          image={note.image}
           title={note.title} 
           description={note.description} 
         />
