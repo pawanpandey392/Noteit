@@ -1,8 +1,10 @@
 import { useContext } from 'react';
+import {Link} from 'react-router-dom';
 
 // import Loader from './../components/Loader';
-import PinnedNotesContext from '../store/pinned-notes-context';
 import NoteCardList from '../components/NoteCardList';
+import Breadcrumb from '../components/layout/Breadcrumb';
+import PinnedNotesContext from '../store/pinned-notes-context';
 
 function PinnedNotesPage() {
 
@@ -11,16 +13,34 @@ function PinnedNotesPage() {
   let content;
 
   if (pinNoteCtx.totalPinnedNotes === 0) {
-    content = <p>No pinned notes yet. Start adding some?</p>
+    content = (
+      <div className="row">
+        <div className="col-lg-2"></div>
+        <div className="col-lg-8">
+          <div className="alert alert-warning" role="alert">
+            No pinned notes yet. <Link to="/notes" className="alert-link">Click here to pin Notes</Link>.
+          </div>
+        </div>
+        <div className="col-lg-2"></div>
+      </div>
+    );
   } else {
     content = <NoteCardList notes={pinNoteCtx.pinnedNotes} />
   }
 
   return (
-    <section className="mt-3">
-      {/* <div>Pinned Notes Page.</div> */}
-      {content}
-    </section>
+    <div>
+      <div className="row">
+        <div className="col-lg-12">
+          <Breadcrumb pageTitle="Pinned Notes Page" />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-lg-12">
+          {content}
+        </div>
+      </div>
+    </div>
   );
 }
 

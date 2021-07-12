@@ -24,9 +24,9 @@ function App() {
         {/* <Route path="/" exact={true}><HomePage /></Route> */}
         <Route path="/" exact><HomePage /></Route>
         <Route path="/create-note"><CreateNotePage /></Route>
-        <Route path="/notes"><AllNotesPage /></Route>
+        <Route path="/all-notes"><AllNotesPage /></Route>
         <Route path="/pinned-notes"><PinnedNotesPage /></Route>
-        <Route path="/setting"><SettingPage /></Route>
+        <Route path="/settings"><SettingPage /></Route>
         <Route path="/about"><AboutPage /></Route>
       </Switch>
     </Layout>

@@ -1,11 +1,16 @@
 import Loader from './../components/Loader';
+import Breadcrumb from '../components/layout/Breadcrumb';
 
 function HomePage() {
   return (
-    <section className="mt-3">
-      <div>Home Page.</div>
+    <div>
+      <div className="row">
+        <div className="col-lg-12">
+          <Breadcrumb pageTitle="Home" />
+        </div>
+      </div>
       <Loader />
-    </section>
+    </div>
   );
 }
 

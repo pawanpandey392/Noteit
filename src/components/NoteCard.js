@@ -40,7 +40,7 @@ function NoteCard(props) {
             </span>
             <span className={classes.dotSeparator}> . </span>
             <span>
-              <Link to="#">update</Link>
+              <Link to="#">edit</Link>
             </span>
             <span className={classes.dotSeparator}> . </span>
             <span>

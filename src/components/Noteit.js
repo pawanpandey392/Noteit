@@ -24,7 +24,7 @@ function Neteit (props) {
   }
 
   return (
-    <form onSubmit={submitHandler} style={{width: '35%'}}>
+    <form className="createNoteForm" onSubmit={submitHandler}>
       <label>Got something in your mind?</label>
       <div className="form-group">
         <input ref={noteTitleRef} className="form-control" id="noteTitle" placeholder="Title" rows="6" required />

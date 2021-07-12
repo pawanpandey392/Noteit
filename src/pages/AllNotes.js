@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
-import Loader from './../components/Loader';
 
+import Loader from './../components/Loader';
 import NoteList from './../components/NoteCardList';
+import Breadcrumb from '../components/layout/Breadcrumb';
+import Scrollbar from '../components/layout/Scrollbar';
 
 function AllNotesPage() {
 
@@ -32,18 +34,34 @@ function AllNotesPage() {
 		});
 	}, [])
 
+	let breadcrumb = (
+		<div className="row">
+			<div className="col-lg-12">
+				<Breadcrumb pageTitle="All Notes" />
+			</div>
+		</div>
+	);
+
 	if (isLoading) {
 		return (
-			<section>
+			<div>
+				{breadcrumb}
 				<Loader />
-			</section>
+			</div>
 		);
 	}
 
   return (
-    <section className="mt-3">
-      <NoteList notes={loadedNotes} />
-    </section>
+    <div>
+      {breadcrumb}
+      <div className="row">
+        <div className="col-lg-12">
+					<Scrollbar>
+						<NoteList notes={loadedNotes} />
+					</Scrollbar>
+        </div>
+      </div>
+    </div>
   );
 }
 
