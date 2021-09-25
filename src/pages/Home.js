@@ -1,6 +1,8 @@
 import Loader from './../components/Loader';
 import Breadcrumb from '../components/layout/Breadcrumb';
 
+import {Warning, Success, Danger} from './../components/Alert';
+
 function HomePage() {
   return (
     <div>
@@ -9,7 +11,10 @@ function HomePage() {
           <Breadcrumb pageTitle="Home" />
         </div>
       </div>
-      <Loader />
+      <Warning />
+      <Success />
+      <Danger />
+      {/* <Loader /> */}
     </div>
   );
 }
